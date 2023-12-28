@@ -1,0 +1,85 @@
+<body>
+    <form [formGroup]="frm">
+        <div class="container">
+                <div fxFlex>
+            <div class="div-banner"></div>
+    </div>
+    <div class="container-div">
+        <div class="div1">
+            <button class="btnPlus" mat-icon-button color="primary" (click)="goBack()">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+        </div>
+        <div class="div2">
+            <h5>Crear cuenta</h5>
+        </div>
+    </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="name" name="name" placeholder="Nombre" maxlength="50" class="user-input">
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="lName" name="lName" maxlength="50" placeholder="Apellido"
+                        class="user-input">
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="email" name="email" type="email" placeholder="Email" class="user-input">
+                    <br>
+                    <mat-error *ngIf="campoValido('email')" class="label">
+                        Porfavor debe ingresar un email valido.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="password1" type="password" [type]="showPassword ? 'password' : 'text'"
+                        name="password1" placeholder="Contraseña" class="pass-input">
+                    <button mat-icon-button (click)="showPassword = !showPassword" [attr.aria-pressed]="showPassword">
+                        <mat-icon>{{
+                            showPassword ? "visibility_off" : "visibility"
+                            }}</mat-icon>
+                    </button><br>
+                    <label [hidden]="campoValido('password1')" class="label">
+                        La contraseña debe ser de mínimo: 8 caracteres, 1 carácter no alfanumérico (!, . -, etc.), 1
+                        dígito numérico y 1 letra mayúscula.</label><br>
+                    <mat-error *ngIf="campoValido('password1')" class="label">
+                        La contraseña debe ser de mínimo: 8 caracteres, 1 carácter no alfanumérico (!, . -, etc.), 1
+                        dígito numérico y 1 letra mayúscula.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="password2" name="password2" type="password"
+                        [type]="showConfirmationPassword ? 'password' : 'text'" placeholder="Confirmar contraseña"
+                        class="pass-input">
+                    <button class="" mat-icon-button matSuffix
+                        (click)="showConfirmationPassword = !showConfirmationPassword"
+                        [attr.aria-pressed]="showConfirmationPassword">
+                        <mat-icon>{{
+                            showConfirmationPassword ? "visibility_off" : "visibility"
+                            }}</mat-icon>
+                    </button> <br>
+                    <mat-error *ngIf="campoValido('password2')" class="label">
+                        Las claves no coinciden.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <button class="btnLogin" [disabled]="!frm.valid" (click)="onSubmit()">Crear Usuario</button>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <button class="btnSigIn" (click)="goBack()">Volver</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>

@@ -1,0 +1,71 @@
+<body>
+    <div class="content-img">
+        <img class="image" src="assets/Vector.png">
+    </div>
+    <div class="line"></div>
+    <div class="content-task">
+        <form [formGroup]="frm">
+            <div class="container-div">
+                <div class="div1">
+                    <button class="btnPlus" mat-icon-button color="primary" (click)="volver()">
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                </div>
+                <div class="div2">
+                    <h4>Nueva tareas</h4>
+                </div>
+            </div>
+
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="nameTask" name="nameTask" type="text" placeholder="Tarea"
+                        class="user-input">
+                    <br>
+                    <mat-error *ngIf="campoValido('nameTask')" class="label">
+                        Campo obligatorio.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="priority" name="priority" type="text" placeholder="Prioridad"
+                        class="user-input">
+                    <br>
+                    <mat-error *ngIf="campoValido('priority')" class="label">
+                        Campo obligatorio.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxFlex="0 0 auto">
+                <mat-form-field class="comboBox">
+                    <mat-select (selectionChange)="onSelectionChange($event)" formControlName="categoria"
+                        name="categoria" placeholder="Categorias">
+                        <mat-option *ngFor="let selectCat of categ" [value]="selectCat.id">
+                            {{ selectCat.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-error *ngIf="campoValido('categoria') " class="label">
+                    Campo obligatorio.
+                </mat-error>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <textarea class="user-input" formControlName="description"  name="description"
+                        placeholder="Descripcion"></textarea>
+                    <br>
+                    <mat-error *ngIf="campoValido('description')" class="label">
+                        Campo obligatorio.
+                    </mat-error>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <button class="btnLogin" (click)="onClick()">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>

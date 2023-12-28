@@ -1,0 +1,28 @@
+<body>
+    <div class="content-img">
+        <img class="image" src="assets/Vector.png">
+    </div>
+    <div class="line"></div>
+    <div>
+        <button class="btnPlus" mat-icon-button color="primary">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <h4>Nueva tareas</h4>
+
+    </div>
+
+    <input type="text" placeholder="Tarea 1">
+    <input type="text" placeholder="Prioridad">
+    <div fxFlex="0 0 auto">
+        <mat-form-field>
+            <mat-select (selectionChange)="onSelectionChange($event)">
+              <mat-option *ngFor="let selectCat of categ" [value]="selectCat.id">
+                {{ selectCat.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <input type="text" placeholder="Buscar">
+
+    <button>Mas tareas</button>
+</body>

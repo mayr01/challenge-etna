@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-card-title>¿Desea eliminar la tarea?</mat-card-title>
+    <mat-card-content>{{ mensaje }}</mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button [mat-dialog-close]="true" color="primary">Aceptar</button>
+        <button mat-raised-button [mat-dialog-close]="false" color="warn">Cancelar</button>
+    </mat-card-actions>
+</mat-card>

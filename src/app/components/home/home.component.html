@@ -1,0 +1,49 @@
+<body>
+    <div class="content-img">
+        <img class="image" src="assets/Vector.png">
+    </div><br>
+    <div class="count">
+        <div class="position-right">
+           <h6>{{this.count}}</h6>
+        </div>
+        
+    </div>
+
+    <div class="line"></div>
+
+    
+    <div class="container-div">
+        <div class="div1">
+            <h3>Tareas</h3>
+        </div>
+        <div class="div2">
+            <button class="btnPlus" mat-icon-button color="primary"(click)="newTask()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+        
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="2rem">
+        <div fxFlex>
+    <input type="text" placeholder="Buscar">
+    <button class="btnPlus" mat-icon-button color="primary"(click)="Search()">
+        <mat-icon>search</mat-icon>
+</button>
+
+    </div>
+</div><br>
+
+
+    <h5>Filtros</h5>
+
+    <mat-tab-group>
+        <mat-tab label="Completas">  </mat-tab>
+        <mat-tab label="Incompletas">  </mat-tab>
+    </mat-tab-group>
+    <mat-card>
+        <mat-card-content>tareas</mat-card-content>
+      </mat-card>
+
+
+      <button  class="btnLogin" (click)="onSubmit()">Mas tareas</button>
+    </body>

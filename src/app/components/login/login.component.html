@@ -1,0 +1,44 @@
+<body>
+    <form [formGroup]="frm" >
+        <div class="container">
+
+            <div class="div-banner"></div>
+
+            <div class="content-welcome">
+                <label>
+                    ¡Bienvenido!
+                </label>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="email" name="email" type="email" placeholder="Email" class="user-input">
+                 </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <input formControlName="password" name="password" type="password"
+                    [type]="showPassword ? 'password' : 'text'" placeholder="Contraseña"
+                    class="pass-input">
+                <button class="" mat-icon-button matSuffix
+                    (click)="showPassword = !showPassword"
+                    [attr.aria-pressed]="showPassword">
+                    <mat-icon>{{
+                        showPassword ? "visibility_off" : "visibility"
+                        }}</mat-icon>
+                </button>
+            </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <button  class="btnLogin" (click)="onSubmit()">Ingresar</button>
+                </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutGap="2rem">
+                <div fxFlex>
+                    <button  class="btnSigIn" (click)="onClick()">Crear usuario</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>

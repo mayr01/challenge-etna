@@ -1,1 +1,212 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+ 
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  .label{
+    font-size: 10PX;
+  }
+/*.div-banner{
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+   // background-color: #FFFFFF;
+    background-color: aquamarine;
+}
+
+*/
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+
+.div-banner,
+.content-welcome,
+.user-input, .btnLogin{
+    margin: 20px 0; // 15px de margen arriba y abajo
+}
+
+.div-banner {
+    width: 385px;
+    height: 64px;
+    top: 272px;
+    left: 632px;
+    padding: 0px, 0px, 0px, 0px;
+    background-image: url("../src/assets/workspace.jpg");
+    background-color: #FFFFFF;
+}
+
+.div-banner2 {
+    width: 385px;
+    height: 64px;
+    top: 272px;
+    left: 632px;
+    padding: 0px, 0px, 0px, 0px;
+    background-image: url("../src/assets/workspace.jpg");
+    background-color: #FFFFFF;
+    margin-bottom: 70px; // 15px de margen arriba y abajo
+
+}
+
+.content-welcome {
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #000000;
+
+}
+
+
+.user-input {
+    width: 496px;
+    height: 48px;
+    top: 464px;
+    left: 576px;
+    padding: 0px, 16px, 0px, 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 16px;
+    border: 1px solid #828282;
+    margin: 10px 0;
+}
+
+.pass-input {
+    width: 470px;
+    height: 48px;
+    top: 464px;
+    left: 576px;
+    margin-left: 30px;
+    padding: 0px, 16px, 0px, 16px;
+    border-radius: 8px;
+    border: 1px;
+    gap: 16px;
+    border: 1px solid #828282;
+}
+
+.btnLogin {
+    background: #5230FF;
+    width:496px;
+    height:48px;
+    top: 608px;
+    left: 576px;
+    padding: 8px, 24px, 8px, 24px;
+    border-radius: 8px;
+    gap: 8px;
+    color: #FFFFFF;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btnSigIn {
+    border: 1px solid #5230FF;
+    width: 496px;
+    height: 48px;
+    top: 672px;
+    left: 576px;
+    padding: 8px, 24px, 8px, 24px;
+    border-radius: 8px;
+    border: 1px1;
+    gap: 8px;
+    color: #5230FF;
+    background: #FFFFFF;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-size: 16px;
+}
+
+.bar{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #5230FF;
+    size:10px;
+}
+
+.line{
+    border-top: 2px solid ;
+    color: #5230FF;
+    size:10px;
+    height: 2px;
+    padding: 0;
+    margin: 60px auto 0 auto;
+
+}
+
+.content-img{
+    position: relative;
+    width: 10px;
+    height: 10px; 
+    border: 1px solid #ccc; 
+}
+
+.count{
+    position: relative;
+}
+.position-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+.img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+}
+
+.comboBox{
+    width: 496px;
+    height: auto;
+}
+
+
+.container-div {
+    white-space: nowrap; 
+  }
+  
+  .div1, .div2 {
+    display: inline-block;
+    width: auto; 
+    padding: 5px;
+  }
